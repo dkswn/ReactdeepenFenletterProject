@@ -5,12 +5,11 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { getFormattedDate } from "util/date";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteLetter, editLetter } from "redux/modules/letters";
+import { deleteLetter, editLetter } from "redux/modules/lettersSlice";
 
 export default function Detail() {
   const dispatch = useDispatch();
   const letters = useSelector((state) => state.letters);
-
   const [isEditing, setIsEditing] = useState(false);
   const [editingText, setEditingText] = useState("");
   const navigate = useNavigate();
