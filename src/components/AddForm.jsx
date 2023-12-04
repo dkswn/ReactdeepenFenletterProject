@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addLetter } from "redux/modules/lettersSlice";
 
 export default function AddForm() {
-  // const { setLetters } = useContext(LetterContext);
+   //const { setLetters } = useContext(LetterContext);
   const dispatch = useDispatch();
 
   const [nickname, setNickname] = useState("");

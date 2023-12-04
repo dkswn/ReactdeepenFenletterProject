@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setMember } from "redux/modules/memberSlice";
 
 export default function Tabs() {
-  const activeMember = useSelector((state) => state.member);
+  const activeMember = useSelector((state) => state.memberSlice);
   const dispatch = useDispatch();
 
   const onActiveMember = (event) => {

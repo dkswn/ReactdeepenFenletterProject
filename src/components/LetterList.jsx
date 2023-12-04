@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import LetterCard from "./LetterCard";
 
 export default function LetterList() {
-  const activeMember = useSelector((state) => state.member);
-  const letters = useSelector((state) => state.letters);
+  const activeMember = useSelector((state) => state.memberSlice);
+  const letters = useSelector((state) => state.lettersSlice);
 
   const filteredLetters = letters.filter(
     (letter) => letter.writedTo === activeMember

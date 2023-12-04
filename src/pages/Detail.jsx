@@ -9,7 +9,7 @@ import { deleteLetter, editLetter } from "redux/modules/lettersSlice";
 
 export default function Detail() {
   const dispatch = useDispatch();
-  const letters = useSelector((state) => state.letters);
+  const letters = useSelector((state) => state.lettersSlice);
   const [isEditing, setIsEditing] = useState(false);
   const [editingText, setEditingText] = useState("");
   const navigate = useNavigate();
