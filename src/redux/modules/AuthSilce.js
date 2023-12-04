@@ -1,28 +1,19 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+loginState: false,
+ 
+};
 
-
-const initialState = {  // 초기값
-    loginState: false,
-    logoutState: true,
-}
 export const AuthSlice = createSlice({
-    name:'auth',
-    initialState,
-    reducers: {
-        loginState:(state) =>{
-            state.isLogin = true;
-        },
-        LogoutState: (state) => {
-            state.isLogin = false;
-        },
-    },
-    
+  name: 'auth',
+  initialState,
+  reducers: {
+    setloginState: (state,action) => {
+      state.loginState = action.payload;
+    }
+  },
 });
 
-export const {loginState, logoutState} = AuthSlice.actions;
-export const slelectLoginState = (state) => state.auth.loginState ;
-export default AuthSlice.reducers;
-  
-
-
+export const { setloginState } = AuthSlice.actions;
+export default AuthSlice.reducer;
